@@ -1,0 +1,20 @@
+header {
+    padding: 30px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+        font-size: 2rem;
+    }
+    nav {
+        ul {
+            list-style: none;
+            display: inline-flex;
+            gap: 20px;
+            li a {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+    }
+}
