@@ -1,53 +1,43 @@
 ---
+import Button from '../components/Button';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
+		<div class="header-hero">
+			<p><span>Bienvenue à bord,</span></p>
+			<h1>Créez plus de valeur avec vos actions sur le web</h1>
+			<p>Hello, moi c’est Tristan. <br/> Depuis 8 ans j’accompagne les entreprises et les entrepreneurs à développer des stratégies d’acquisition digitale, suivre leurs analytics et créer des expériences web sur-mesure.
+			<br/>Et vous, comment puis-je vous aider ?</p>
+			<Button>Proposer un projet</Button>
+		</div>
 	</main>
 </Layout>
 
 <style>
 	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+		padding: 0 12%;
 	}
 	h1 {
-		font-size: 3rem;
+		font-size: 5rem;
 		font-weight: 800;
 		margin: 0;
+		max-width: 1000px;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+
+	.header-hero {
+		height: 83vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
+
+	.header-hero p span {
+		font-size: 24px;
 	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+
+	.header-hero p {
+		max-width: 900px;
 	}
 </style>

@@ -1,4 +1,4 @@
-import styles from '../styles/styles.module.scss'
+import styles from '../styles/Header.module.scss'
 
 export default function Header() {
   return (
@@ -8,11 +8,15 @@ export default function Header() {
       </div>
       <nav>
         <ul>
-          <li><a href="#">Lien 1</a></li>
-          <li><a href="#">Lien 2</a></li>
-          <li><a href="#">Lien 3</a></li>
+          <li><a href="#">Expertises</a></li>
+          <li><a href="#">Projets</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Source</a></li>
         </ul>
       </nav>
+      <div className={styles.ctalink}>
+        <a href="#">Contact</a>
+      </div>
     </header>
   )
 }
