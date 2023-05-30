@@ -1,0 +1,35 @@
+.hero_list {
+    padding: 5% 20%;
+}
+
+.hero_card {
+    img {
+        width: 100%;
+        border-radius: 85px;
+    }
+    .card_txt {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+            font-size: 2.2rem;
+            max-width: 500px;
+            margin: 0;
+        }
+        h3 {
+            margin: 0;
+            padding-top: 10px;
+            font-weight: 400;
+        }
+        p {
+            max-width: 400px;
+            text-align: right;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.hero_card:not(:first-child) {
+    margin-top: 80px;
+}

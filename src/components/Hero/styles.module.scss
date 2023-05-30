@@ -11,6 +11,7 @@ h1 {
     max-width: 1000px;
 }
 .header_hero {
+    padding: 0 12%;
     height: 83vh;
     display: flex;
     flex-direction: column;
@@ -18,6 +19,10 @@ h1 {
     background-size: cover;
     position: relative;
     z-index: 1;
+    background: url('/gradient.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right;
 }
 .header_hero p span {
     font-size: 24px;
@@ -51,8 +56,10 @@ HERO TEXT
 */
 
 .hero_txt {
+    padding: 0 12%;
     p {
-        font-size: 3rem;
-        line-height: 4rem;
+        font-size: 2rem;
+        line-height: 3rem;
+        padding: 0 20%;
     }
 }

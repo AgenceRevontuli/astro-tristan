@@ -1,5 +1,6 @@
 ---
 import HeroHeader from '../components/Hero/HeroHeader';
+import HeroProjectsList from '../components/Hero/HeroProjects/HeroProjectsList';
 import HeroText from '../components/Hero/HeroText';
 import Layout from '../layouts/Layout.astro';
 ---
@@ -12,11 +13,10 @@ import Layout from '../layouts/Layout.astro';
 			references={true}
 		/>
 		<HeroText />
+		<HeroProjectsList />
 	</main>
 </Layout>
 
 <style>
-	main {
-		padding: 0 12%;
-	}
+
 </style>
