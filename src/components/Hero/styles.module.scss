@@ -1,0 +1,58 @@
+/*
+***********
+HERO HEADER 
+***********
+*/
+
+h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    margin: 0;
+    max-width: 1000px;
+}
+.header_hero {
+    height: 83vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+.header_hero p span {
+    font-size: 24px;
+}
+.header_hero p {
+    max-width: 900px;
+}
+.hero_describe {
+    margin-bottom: 40px;
+}
+.hero_cta {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero_cta > div  {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+}
+
+/*
+***********
+HERO TEXT 
+***********
+*/
+
+.hero_txt {
+    p {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+}

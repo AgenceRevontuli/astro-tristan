@@ -1,43 +1,22 @@
 ---
-import Button from '../components/Button';
+import HeroHeader from '../components/Hero/HeroHeader';
+import HeroText from '../components/Hero/HeroText';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Tristan Tornatore - Freelance développeur web">
 	<main>
-		<div class="header-hero">
-			<p><span>Bienvenue à bord,</span></p>
-			<h1>Créez plus de valeur avec vos actions sur le web</h1>
-			<p>Hello, moi c’est Tristan. <br/> Depuis 8 ans j’accompagne les entreprises et les entrepreneurs à développer des stratégies d’acquisition digitale, suivre leurs analytics et créer des expériences web sur-mesure.
-			<br/>Et vous, comment puis-je vous aider ?</p>
-			<Button>Proposer un projet</Button>
-		</div>
+		<HeroHeader 
+			title="Créez plus de valeur avec vos actions sur le web"
+			ctaBtn="Proposer un projet"
+			references={true}
+		/>
+		<HeroText />
 	</main>
 </Layout>
 
 <style>
 	main {
 		padding: 0 12%;
-	}
-	h1 {
-		font-size: 5rem;
-		font-weight: 800;
-		margin: 0;
-		max-width: 1000px;
-	}
-
-	.header-hero {
-		height: 83vh;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	.header-hero p span {
-		font-size: 24px;
-	}
-
-	.header-hero p {
-		max-width: 900px;
 	}
 </style>
