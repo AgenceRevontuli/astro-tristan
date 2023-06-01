@@ -1,0 +1,18 @@
+---
+import HeroProjectCard from './HeroProjectCard'
+const projects = await Astro.glob('../../../pages/projets/*.md');
+---
+
+<ul>
+    {projects.map(projet => (
+        <li>
+            <HeroProjectCard 
+                title={projet.frontmatter.title}
+                imgUrl={projet.frontmatter.img.url}
+                alt={projet.frontmatter.img.alt}
+                description={projet.frontmatter.description}
+                tags={projet.frontmatter.tags}
+            />
+        </li>
+    ))}
+</ul>
