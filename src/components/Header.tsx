@@ -10,7 +10,7 @@ export default function Header() {
         <ul>
           <li><a href="#">Expertises</a></li>
           <li><a href="#">Projets</a></li>
-          <li><a href="#">À propos</a></li>
+          <li><a href="/about">À propos</a></li>
           <li><a href="#">Source</a></li>
         </ul>
       </nav>

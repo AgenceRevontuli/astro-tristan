@@ -1,0 +1,27 @@
+.sub_socials {
+    max-width: 30%;
+    ul {
+        list-style: none;
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+            span { 
+                font-size: 1.5rem;
+            }
+            p {
+                display: block;
+                margin: 0;
+                font-size: 1.75rem;
+                text-align: left;
+                width: 130px;
+            }
+        }
+        li:not(:last-child) {
+                margin-bottom: 15px;
+        }
+    }
+}

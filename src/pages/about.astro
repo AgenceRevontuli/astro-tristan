@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Social from "../components/Social";
+---
+
+<Layout title="Tristan Tornatore - Freelance Developpeur Web">
+    <div class="container">
+        <div class="sub-header">
+            <h1>Créer des projets à forte expérience ajoutée, mon ambition !</h1>
+            <div class="signature">
+                <img src="./signature-tristan-tornatore.png" alt="">
+            </div>
+            <div class="about-img">
+                <img src="./tristan-tornatore-freelance-developpeur-web.jpg" alt="">
+            </div>
+        </div>
+        <div class="sub_content">
+            <Social />
+            <div>
+                <h2>Je réalise pour vous des sites web qui convertissent</h2>
+                <p>Tout le monde veut un beau site internet. Tout le monde veut un site qui marque les esprits. Tout le monde veut un site qui rapporte de l'argent. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, facilis repudiandae accusantium porro id repellendus quae natus corrupti non iusto sapiente recusandae sed ipsum cum! Vel cum officia molestias eius.</p>
+            </div>
+            <div>
+                <h2>Ils témoignent</h2>
+                <div>
+                    <h3>Kelian LALLOUE</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis fuga repellat, officia vero saepe temporibus repellendus praesentium aliquam unde amet, porro similique est in necessitatibus nisi nobis odit quo laudantium.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style lang="scss">
+    .container {
+        padding: 5% 12%;
+    }
+    .sub-header{
+        position: relative;
+        padding-bottom: 100px;
+        margin-bottom: 80px;
+        h1 {
+            font-size: 6rem;
+            max-width: 900px;
+            margin: 0;
+        }
+    }
+    .about-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        width: 60%;
+    }
+    .signature {
+        position: absolute;
+        right: 50%;
+        bottom: 40px;
+    }
+    .signature img{
+        width: 250px;
+    }
+    .sub_content {
+        display: flex;
+        gap: 70px;
+        > div {
+            width: 40%;
+        }
+    }
+</style>
