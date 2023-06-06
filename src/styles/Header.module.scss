@@ -1,4 +1,10 @@
 header {
+    .header_title{
+        a {
+            color:#000;
+            text-decoration:none;
+        }
+    }
     padding: 30px 12%;
     display: flex;
     justify-content: space-between;

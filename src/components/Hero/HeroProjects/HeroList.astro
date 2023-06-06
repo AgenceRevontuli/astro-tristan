@@ -11,13 +11,17 @@ const projects = await Astro.glob('../../../pages/projets/*.md');
 
 <div class="projects_list">
         {projects.map(projet => (
-                <HeroProjectCard
+                <div>
+                    <HeroProjectCard
                     title={projet.frontmatter.title}
                     imgUrl={projet.frontmatter.img.url}
                     alt={projet.frontmatter.img.alt}
                     excerpt={projet.frontmatter.excerpt}
                     tags={projet.frontmatter.tags}
-                />
+                    url={projet.url}
+                    />
+                </div>
+               
         ))}
 </div>
 

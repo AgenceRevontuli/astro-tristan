@@ -3,8 +3,8 @@ import styles from '../styles/Header.module.scss'
 export default function Header() {
   return (
     <header>
-      <div>
-        <p>Tristan Tornatore</p>  
+      <div className={styles.header_title}>
+        <a href="/"><p>Tristan Tornatore</p></a>
       </div>
       <nav>
         <ul>

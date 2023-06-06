@@ -1,0 +1,21 @@
+---
+ import Layout from "./Layout.astro";
+ const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+    <div class="project_header">
+        <h1>{frontmatter.title}</h1>
+        <p>{frontmatter.excerpt}</p>
+    </div>
+    <div>
+        <slot />
+    </div>
+</Layout>
+
+<style>
+    .project_header {
+        padding: 5% 20%;
+        text-align: center;
+    }
+</style>

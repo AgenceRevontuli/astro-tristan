@@ -7,6 +7,7 @@ type Props = {
   alt: string,
   excerpt: string,
   tags: string[],
+  url?: string,
 }
 
 export default function HeroProjectCard({
@@ -14,16 +15,19 @@ export default function HeroProjectCard({
   imgUrl,
   alt,
   excerpt,
-  tags
+  tags,
+  url
 }: Props) {
   return (
       <div className={styles.hero_card}>
-        <div>
-          <img src={imgUrl} alt={alt} />
-        </div>
+        <a href={url}>
+          <div>
+            <img src={imgUrl} alt={alt} />
+          </div>
+        </a>
         <div className={styles.card_txt}>
           <div className={styles.card_title}>
-              <h2>{title}</h2>
+              <a href={url}><h2>{title}</h2></a>
               <h3>{excerpt}</h3>
               <div className={styles.card_tags}>
                 <ul className={styles.tags_list}>
@@ -33,9 +37,11 @@ export default function HeroProjectCard({
                 </ul>
               </div>
           </div>
-          <div className={styles.card_cta}>
-            <MdArrowOutward />
-          </div>
+          <a href={url}>
+            <div className={styles.card_cta}>
+              <MdArrowOutward />
+            </div>
+          </a>
         </div>
     </div>
   )

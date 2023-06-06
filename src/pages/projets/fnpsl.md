@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/ProjectLayout.astro"
 title: Fédération Nationale Profession Sport et Loisirs
 img:
     url: './fnpsl.png'
@@ -10,6 +11,4 @@ tags: [
     'Wordpress'
 ]
 ---
-
-test
 

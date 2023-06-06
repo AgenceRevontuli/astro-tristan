@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/ProjectLayout.astro"
 title: Crococlub de Cabourg
 img:
     url: './cabourg-plage.png'

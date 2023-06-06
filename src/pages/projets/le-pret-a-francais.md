@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/ProjectLayout.astro"
 title: Le Prêt à Français
 img:
     url: './lpaf.png'

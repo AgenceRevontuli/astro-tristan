@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/ProjectLayout.astro"
 title: LMconseil
 img:
     url: './lmconseil.png'
