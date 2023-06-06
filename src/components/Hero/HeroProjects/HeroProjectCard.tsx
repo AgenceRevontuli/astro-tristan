@@ -1,36 +1,42 @@
 import styles from './style.module.scss';
+import { MdArrowOutward } from 'react-icons/md'
 
 type Props = {
   title: string, 
   imgUrl: string,
   alt: string,
-  description: string,
-  tags: string
+  excerpt: string,
+  tags: string[],
 }
 
 export default function HeroProjectCard({
   title,
   imgUrl,
   alt,
-  description,
+  excerpt,
   tags
 }: Props) {
   return (
-    <div>
-       <div className={styles.hero_card}>
+      <div className={styles.hero_card}>
         <div>
           <img src={imgUrl} alt={alt} />
         </div>
         <div className={styles.card_txt}>
-          <div>
+          <div className={styles.card_title}>
               <h2>{title}</h2>
-              <h3>{tags}</h3>
+              <h3>{excerpt}</h3>
+              <div className={styles.card_tags}>
+                <ul className={styles.tags_list}>
+                  {tags ? tags.map((tag, index) => (
+                      <li><span key={index} className={styles.tag}>{tag}</span></li>
+                    )) : []}
+                </ul>
+              </div>
           </div>
-          <div>
-              <p>{description}</p>
+          <div className={styles.card_cta}>
+            <MdArrowOutward />
           </div>
         </div>
-      </div>
     </div>
   )
 }

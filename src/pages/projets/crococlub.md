@@ -1,9 +1,13 @@
 ---
-title: Le crococlub du futur
+title: Crococlub de Cabourg
 img:
     url: './cabourg-plage.png'
     alt: 'Site Wordpress du crococlub de Cabourg'
-tags: Loisirs - 2023
-description: Création d'un site wordpress / Maquettage
+excerpt: Loisirs - 2023
+tags: [
+    'Branding',
+    'Webdesign',
+    'Wordpress'
+]
 ---
 
