@@ -1,6 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Social from "../components/Social";
+import Carousel from "../components/Carousel";
+import Button from "../components/Button";
+
+interface Testimonials {
+    frontmatter: {
+    person: string;
+    entreprise: string;
+    role: string;
+    testimonial: string;
+    img: {
+      url: string;
+      alt: string;
+    };
+  };
+}
+
+const TestimonialsList: Testimonials[] = await Astro.glob("../content/testimonials/*md");
 ---
 
 <Layout title="Tristan Tornatore - Freelance Developpeur Web">
@@ -19,13 +36,13 @@ import Social from "../components/Social";
             <div>
                 <h2>Je réalise pour vous des sites web qui convertissent</h2>
                 <p>Tout le monde veut un beau site internet. Tout le monde veut un site qui marque les esprits. Tout le monde veut un site qui rapporte de l'argent. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, facilis repudiandae accusantium porro id repellendus quae natus corrupti non iusto sapiente recusandae sed ipsum cum! Vel cum officia molestias eius.</p>
+                <Button>Travaillons ensemble</Button>
             </div>
-            <div>
-                <h2>Ils témoignent</h2>
-                <div>
-                    <h3>Kelian LALLOUE</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis fuga repellat, officia vero saepe temporibus repellendus praesentium aliquam unde amet, porro similique est in necessitatibus nisi nobis odit quo laudantium.</p>
-                </div>
+            <>
+                <Carousel 
+                    items={TestimonialsList}
+                    client:load
+                />
             </div>
         </div>
     </div>
@@ -44,6 +61,9 @@ import Social from "../components/Social";
             max-width: 900px;
             margin: 0;
         }
+    }
+    h2 {
+        line-height: 2.4rem;
     }
     .about-img {
         position: absolute;

@@ -1,4 +1,5 @@
-import styles from '../styles/Header.module.scss'
+import styles from '../styles/Header.module.scss';
+import { BsGithub } from 'react-icons/bs';
 
 export default function Header() {
   return (
@@ -11,7 +12,7 @@ export default function Header() {
           <li><a href="#">Expertises</a></li>
           <li><a href="#">Projets</a></li>
           <li><a href="/about">À propos</a></li>
-          <li><a href="#">Source</a></li>
+          <li><a href="#"><BsGithub /> Source</a></li>
         </ul>
       </nav>
       <div className={styles.ctalink}>
