@@ -1,0 +1,33 @@
+.post_card {
+    .post_card_img {
+        img {
+            width: 100%;
+        }
+    }
+    h2 {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+    p { 
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+    }
+    .post_card_meta {
+        display: flex;
+        justify-content: space-between;
+        p {
+            font-size: 0.8rem;
+        }
+    }
+    .post_card_category{
+        display: flex;
+        gap: 15px;
+        list-style: none;
+        .category_tag {
+            padding: 5px 15px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+    }
+}

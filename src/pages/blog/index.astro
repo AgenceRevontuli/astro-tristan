@@ -1,0 +1,80 @@
+---
+import BlogCard from '../../components/BlogCard';
+import Layout from "../../layouts/Layout.astro";
+interface Posts {
+    frontmatter:{
+    title: string;
+    excerpt: string;
+    date: string;
+    author: string;
+    category: string[];
+    featuredImg: {
+      url: string;
+      alt: string;
+    };
+  };
+}
+
+const posts: Posts[] = await Astro.glob('./*md')
+---
+<Layout title="Blog de Tristan TORNATORE">
+    <div class="container">
+        <div class="blog_header">
+            <h1>Actualités et Tips sur l'acquisition digitale</h1>
+            <div class="sub_title-blog">
+                <p>Je partage mes expériences, mes built-in-public et toutes mes actualités sur ce blog. Bonjour, je suis Tristan TORNATORE et j'explore les stratégies d'acquisition digitale, le développement web et l'analyse Data depuis 8 ans.</p>
+            </div>
+        </div>
+        <div class="posts_list">
+            {posts.map(post => (
+                <BlogCard 
+                    title={post.frontmatter.title}
+                    excerpt={post.frontmatter.excerpt}
+                    date={post.frontmatter.date}
+                    author={post.frontmatter.author}
+                    imgUrl={post.frontmatter.featuredImg.url}
+                    alt={post.frontmatter.featuredImg.alt}
+                    category={post.frontmatter.category}
+                />
+            ))}
+        </div>
+        
+    </div>
+</Layout>
+
+<style lang="scss">
+    .container {
+        padding: 5% 12%;
+    }
+    .blog_header {
+        h1 {
+            font-size: 5rem;
+            max-width: 800px;
+        }
+        margin-bottom: 150px;
+        .sub_title-blog{
+            max-width: 1000px;
+            padding-left: 150px;
+            position: relative;
+            p{
+                font-size: 1.8rem;
+                line-height: 3rem;
+            }
+        }
+        .sub_title-blog::before {
+            content: " ";
+            display: block;
+            height: 2px;
+            width: 120px;
+            position: absolute;
+            background-color: #000;
+            transform: translateX(-120%);
+            top: 25px;
+        }
+    }
+    .posts_list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 70px;
+        }
+</style>

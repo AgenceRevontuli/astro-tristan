@@ -12,6 +12,7 @@ export default function Header() {
           <li><a href="#">Expertises</a></li>
           <li><a href="#">Projets</a></li>
           <li><a href="/about">À propos</a></li>
+          <li><a href="/blog">Blog</a></li>
           <li><a href="#"><BsGithub /> Source</a></li>
         </ul>
       </nav>
