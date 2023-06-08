@@ -2,6 +2,7 @@
 import BlogCard from '../../components/BlogCard';
 import Layout from "../../layouts/Layout.astro";
 interface Posts {
+    url: string;
     frontmatter:{
     title: string;
     excerpt: string;
@@ -35,6 +36,7 @@ const posts: Posts[] = await Astro.glob('./*md')
                     imgUrl={post.frontmatter.featuredImg.url}
                     alt={post.frontmatter.featuredImg.alt}
                     category={post.frontmatter.category}
+                    postUrl={post.url}
                 />
             ))}
         </div>

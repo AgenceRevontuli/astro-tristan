@@ -8,6 +8,7 @@ type Props = {
     imgUrl: string; 
     alt: string;
     category: string[];
+    postUrl: string;
 }
 
 const BlogCard = ({
@@ -17,13 +18,16 @@ const BlogCard = ({
     author,
     imgUrl,
     alt,
-    category
+    category,
+    postUrl
 }: Props) => {
   return (
     <div className={styles.post_card}>
-      <div className={styles.post_card_img}>
-        <img src={imgUrl} alt={alt} />
-      </div>
+      <a href={postUrl}>
+        <div className={styles.post_card_img}>
+          <img src={imgUrl} alt={alt} />
+        </div>
+      </a>
       <div>
         <div className={styles.post_card_meta}>
             <div>
@@ -40,8 +44,8 @@ const BlogCard = ({
                 </li>
             ))}
         </div>
-        <h2>{title}</h2>
-        <p>{excerpt}</p>
+        <a href={postUrl}><h2>{title}</h2></a>
+        <a href={postUrl}><p>{excerpt}</p></a>
       </div>
     </div>
   )

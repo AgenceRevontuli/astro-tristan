@@ -1,0 +1,46 @@
+---
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+console.log(frontmatter)
+---
+
+<Layout title="">
+    <div class="container">
+        <div class="post_header">
+            <h1>{frontmatter.title}</h1>
+            <div class="post_meta">
+                <p>{frontmatter.date}</p>
+                <p>{frontmatter.author}</p>
+            </div>
+            <div>
+                <p>{frontmatter.excerpt}</p>
+            </div>
+            <div>
+                <img src={`${frontmatter.featuredImg.url}`} alt="">
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style lang="scss">
+    .container {
+        padding: 5% 12%;
+        .post_header {
+            max-width: 1000px;
+            margin: 0 auto;
+            h1 { 
+                font-size: 3rem;
+                line-height: 4.5rem;
+                text-align: center;
+            }
+        }
+        .post_meta{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+</style>

@@ -1,11 +1,12 @@
 import styles from '../styles/Header.module.scss';
 import { BsGithub } from 'react-icons/bs';
+import Logo from '/logo-revontuli-tristan-tornatore-digital.svg';
 
 export default function Header() {
   return (
     <header>
       <div className={styles.header_title}>
-        <a href="/"><p>Tristan Tornatore</p></a>
+        <a href="/"><img src={Logo} alt="Logo de Tristan" /></a>
       </div>
       <nav>
         <ul>

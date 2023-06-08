@@ -1,11 +1,14 @@
 header {
+    img {
+        width: 200px;
+    }
     .header_title{
         a {
             color:#000;
             text-decoration:none;
         }
     }
-    padding: 30px 12%;
+    padding: 10px 12%;
     display: flex;
     justify-content: space-between;
     align-items: center;
