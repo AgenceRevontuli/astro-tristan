@@ -1,11 +1,13 @@
 import styles from '../styles/Blog.module.scss';
+import Category from './Blog/Category';
+import { generateCategoryData } from '../utils/helper';
 
 type Props = {
     title: string;
     excerpt: string;
     date: string;
     author: string;
-    imgUrl: string; 
+    image: string;
     alt: string;
     category: string[];
     postUrl: string;
@@ -16,16 +18,17 @@ const BlogCard = ({
     excerpt,
     date,
     author,
-    imgUrl,
+    image,
     alt,
     category,
     postUrl
 }: Props) => {
+  const allCategories = generateCategoryData(category);
   return (
     <div className={styles.post_card}>
       <a href={postUrl}>
         <div className={styles.post_card_img}>
-          <img src={imgUrl} alt={alt} />
+          <img src={`${image}.jpeg`} alt={alt} />
         </div>
       </a>
       <div>
@@ -38,10 +41,10 @@ const BlogCard = ({
             </div>
         </div>
         <div className={styles.post_card_category}>
-            {category.map((categorie, index) => (
-                <li key={index} className={styles.category_tag}>
-                    {categorie}
-                </li>
+            {allCategories.map(category => (
+                <Category 
+                  category={category}
+                />
             ))}
         </div>
         <a href={postUrl}><h2>{title}</h2></a>

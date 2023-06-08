@@ -1,0 +1,130 @@
+---
+import Layout from "./Layout.astro";
+import {generateCategoryData} from '../utils/helper';
+import Category from '../components/Blog/Category'
+
+const { frontmatter } = Astro.props;
+const allCategoriesData = generateCategoryData(frontmatter.category);
+console.log(allCategoriesData)
+---
+
+<Layout title="">
+    <div class="container">
+        <div class="post">
+            <div class="post_header">
+                <h1>{frontmatter.title}</h1>
+                <div class="post_meta">
+                    <p>{frontmatter.date}</p>
+                    <p>{frontmatter.author}</p>
+                </div>
+                <div class="post_card_category">
+                    {allCategoriesData.map(category => (
+                        <Category 
+                            category={category}
+                        />
+                    ))}
+                </div>
+                <div class="post_exerpt">
+                    <p>{frontmatter.excerpt}</p>
+                </div>
+                <div class="post_img">
+                    <img 
+                        width="100%"
+                        height="350"
+                        src={`${frontmatter.image}.jpeg`} 
+                        alt={frontmatter.alt}
+                    >
+                </div>
+            </div>
+            <div class="post_content">
+                <slot />
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style lang="scss" is:global>
+    .container {
+        .post {
+            max-width: 900px;
+            margin: 60px auto;
+        }
+        .post_header {
+            margin: 0 auto;
+            h1 { 
+                font-size: 3rem;
+                line-height: 4.5rem;
+                text-align: center;
+                margin: 0;
+            }
+        }
+        .post_meta{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            p {
+                font-size: 14px;
+            }
+        }
+        .post_exerpt {
+            text-align: center;
+            p {
+                font-size: 1.45rem;
+                line-height: 2.45rem;
+            }
+        }
+        .post_img {
+            img {
+                object-fit: cover;
+                border-radius: 15px;
+            }
+        }
+        .post_card_category{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        list-style: none;
+        }
+        .post_content {
+            p {
+                font-size: 1.45rem;
+                line-height: 2.45rem;
+                font-weight: 300;
+            }
+            h2 {
+                font-size: 2.55rem;
+                line-height: 4rem;
+                padding: 0px 0px 0px 20px;
+                border-left: 4px solid #FFDA22;
+                margin: 60px 0;
+            }
+            h3 {
+                font-size: 2rem;
+            }
+            strong {
+                font-size: 1.15rem;
+                line-height: 2rem;
+                font-weight: 500;
+                display: block;
+                padding: 20px 40px;
+                background-color: #FFE8E3;
+                border-radius: 10px;
+            }
+            a {
+                font-weight: 500;
+                color: #000;
+                border-bottom: 3px solid #FFDA22;
+                padding-bottom: 2px;
+                text-decoration: none;
+            }
+            ul {
+                margin-left: 25px;
+                font-size: 1.45rem;
+                li {
+                    margin: 20px 0;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+</style>

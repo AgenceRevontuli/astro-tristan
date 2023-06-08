@@ -9,10 +9,8 @@ interface Posts {
     date: string;
     author: string;
     category: string[];
-    featuredImg: {
-      url: string;
-      alt: string;
-    };
+    image: string,
+    alt: string;
   };
 }
 
@@ -33,8 +31,8 @@ const posts: Posts[] = await Astro.glob('./*md')
                     excerpt={post.frontmatter.excerpt}
                     date={post.frontmatter.date}
                     author={post.frontmatter.author}
-                    imgUrl={post.frontmatter.featuredImg.url}
-                    alt={post.frontmatter.featuredImg.alt}
+                    image={post.frontmatter.image}
+                    alt={post.frontmatter.alt}
                     category={post.frontmatter.category}
                     postUrl={post.url}
                 />
