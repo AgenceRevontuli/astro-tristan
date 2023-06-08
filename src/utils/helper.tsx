@@ -10,10 +10,10 @@ export function generateSlug(string: string): string {
         .trim()
         .toLowerCase()
         .replace(/\s+/g, '-')
-        .replace(/[ˆ\w\-]+/g, '')
+        .replace(/[^\w\-]+/g, '')
         .replace(/\-\-+/g, '-')
-        .replace(/ˆ-+/g, '')
-        .replace(/-+$/, '')
+        .replace(/^-+/, '')
+        .replace(/-+$/, '');
 }
 
 export function generateCategoryData(categories: string[]): Category[] {
