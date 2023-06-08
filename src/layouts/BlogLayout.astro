@@ -1,7 +1,10 @@
 ---
 import Layout from "./Layout.astro";
+import {generateCategoryData} from '../utils/helper';
+
 const { frontmatter } = Astro.props;
-console.log(frontmatter)
+const allCategoriesData = generateCategoryData(frontmatter.category);
+console.log(allCategoriesData)
 ---
 
 <Layout title="">
@@ -16,7 +19,6 @@ console.log(frontmatter)
                 <p>{frontmatter.excerpt}</p>
             </div>
             <div>
-                <img src={`${frontmatter.featuredImg.url}`} alt="">
             </div>
         </div>
     </div>
