@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/Post.astro"
 title: 'Comment installer Matomo gratuitement sur son serveur en 2023'
-excerpt: "La fin de Google Universal Analytics va vous pousser à migrer vers de nouveaux outils d'analyse de données. Vous pourriez migrer vers Google Analytics 4 ou alors installer dès maintenant l'outil d'analyse recommandé par la CNIL : Matomo. Nous partageons avec vous les étapes clés de l'installation de Matomo sur votre serveur"
+excerpt: "La fin de Google Universal Analytics va vous pousser à migrer vers de nouveaux outils d'analyse de données. Vous pourriez migrer vers Google Analytics 4 ou alors installer dès maintenant l'outil d'analyse recommandé par la CNIL : Matomo. Je partage avec vous les étapes clés de l'installation de Matomo sur votre serveur"
 date: '7 juin 2023'
 author: 'Tristan Tornatore'
 category: 

@@ -1,5 +1,6 @@
 ---
 import HeroHeader from '../components/Hero/HeroHeader';
+import HeroServices from '../components/Hero/HeroServices'
 import HeroList from '../components/Hero/HeroProjects/HeroList.astro';
 import HeroText from '../components/Hero/HeroText';
 import Layout from '../layouts/Layout.astro';
@@ -7,16 +8,15 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Tristan Tornatore - Freelance développeur web">
 	<main>
-		<HeroHeader 
+			<HeroHeader 
 			title="Créez plus de valeur avec vos actions sur le web"
 			ctaBtn="Proposer un projet"
 			references={true}
-		/>
-		<HeroText />
-		<HeroList />
+			/>
+			<HeroServices />
+			<HeroList />
 	</main>
 </Layout>
 
 <style>
-
 </style>

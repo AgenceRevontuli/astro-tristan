@@ -21,7 +21,7 @@ const TestimonialsList: Testimonials[] = await Astro.glob("../content/testimonia
 ---
 
 <Layout title="Tristan Tornatore - Freelance Developpeur Web">
-    <div class="container">
+    <div class="main-content">
         <div class="sub-header">
             <h1>Créer des projets à forte expérience ajoutée, mon ambition !</h1>
             <div class="signature">
@@ -49,8 +49,8 @@ const TestimonialsList: Testimonials[] = await Astro.glob("../content/testimonia
 </Layout>
 
 <style lang="scss">
-    .container {
-        padding: 5% 12%;
+    .main-content{
+        padding:80px 0;
     }
     .sub-header{
         position: relative;

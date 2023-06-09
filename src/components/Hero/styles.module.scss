@@ -11,7 +11,6 @@ h1 {
     max-width: 1000px;
 }
 .header_hero {
-    padding: 0 12%;
     height: 83vh;
     display: flex;
     flex-direction: column;
@@ -56,7 +55,6 @@ HERO TEXT
 */
 
 .hero_txt {
-    padding: 0 12%;
     p {
         font-size: 2rem;
         line-height: 3rem;
@@ -71,9 +69,52 @@ HERO TITLE
 ***********
 */
 .hero_title {
-    padding: 80px 12% 0px 12%;
+    padding: 80px 0px 0px 0px;
     h2 {
         font-size: 3rem;
         margin: 0;
+    }
+}
+
+/*
+***********
+HERO Servcice
+***********
+*/
+
+.row_services{
+    display: flex;
+    gap: 40px;
+}
+.row_services:not(:last-child) {
+    margin-bottom: 40px;
+}
+.col_services {
+    h2 {
+        font-size: 3rem;
+        margin: 0 0 10px 0;
+    }
+    h3 {
+        font-size: 2rem;
+        margin: 0 0 10px 0;
+        text-align: center;
+    }
+    background-color: #fff;
+    padding: 20px 60px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    p {
+        text-align: center;
+    }
+}
+.col_row {
+    min-width: 800px;
+    padding: 80px;
+    p{ 
+        text-align: left;
     }
 }

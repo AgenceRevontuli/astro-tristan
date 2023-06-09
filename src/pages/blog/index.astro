@@ -17,7 +17,7 @@ interface Posts {
 const posts: Posts[] = await Astro.glob('./*md')
 ---
 <Layout title="Blog de Tristan TORNATORE">
-    <div class="container">
+    <div class="main-content">
         <div class="blog_header">
             <h1>Actualités et Tips sur l'acquisition digitale</h1>
             <div class="sub_title-blog">
@@ -38,13 +38,12 @@ const posts: Posts[] = await Astro.glob('./*md')
                 />
             ))}
         </div>
-        
     </div>
 </Layout>
 
 <style lang="scss">
-    .container {
-        padding: 5% 12%;
+    .main-content{
+        padding:80px 0;
     }
     .blog_header {
         h1 {
